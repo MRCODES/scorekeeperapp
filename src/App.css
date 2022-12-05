@@ -7,32 +7,145 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+#counter-container {
+
+  background-color: rgba(0, 0, 0, 0.577);
+  height: 100vh;
+  width: 60;
+  margin: 0 10%;
+ 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+#score-keeper {
+    font-size: 5rem;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgb(82, 69, 53);
+    height: 100px;
+    padding: 3% 0;
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+  
+  }
+
+
+
+
+
+
+#players {
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  font-size: 2em;
+ grid-gap: 3px;
+
+
+}
+
+#player-1 {
+
+  border-right: 1px solid black;
+ 
+}
+
+
+#player-1 p, #player-2 p {
+
+  width: 100%;
+ 
+
+ 
+}
+
+
+
+
+#counter-display {
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+#counter-display1, #counter-display2 {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  height: 400px;
+  font-size: 10rem;
+  margin: 0 auto;
+  width: 100%;
+
+  background-color: #333;
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+
+}
+
+
+
+button {
+display: flex;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1%;
+
+  box-shadow: 2px 1px 2px 1px black;
+  background-color:grey;
   color: white;
+  font-size: 2rem;
+  background-color: #333;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+#player-buttons {
+display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+
+
+
+#player-buttons > #player-1-buttons {
+display: inherit;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+width: 40%;
+margin: 0 auto;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#player-buttons > #player-2-buttons {
+  display: inherit;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr;
+   width: 40%;
+  margin: 0 auto;
+ 
+ }
+
+
+#reset {
+
+  background-image: url(/refresh-button.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
+ 
 }
