@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.914625f0.css",
+    "main.js": "/static/js/main.95436780.js",
+    "static/media/tiktoktoe-pexels-pixabay-220051.jpg": "/static/media/tiktoktoe-pexels-pixabay-220051.7ba19ac7b1eb2af4e64e.jpg",
+    "static/media/score-keeper-white-01.svg": "/static/media/score-keeper-white-01.30a76311667a7a5153d0.svg",
+    "static/media/chalk-refresh-01.svg": "/static/media/chalk-refresh-01.dd0d6a992f34378237a1.svg",
+    "static/media/plus-01.svg": "/static/media/plus-01.9ec6ca5aa65f5ac7d6dc.svg",
+    "static/media/minus.svg": "/static/media/minus.61287235ad309110e073.svg",
+    "static/media/Chalk-Regular.ttf": "/static/media/Chalk-Regular.f8c9cde696ac5163dbf5.ttf",
+    "static/media/chalkboard.ttf": "/static/media/chalkboard.fb780bc32da88186b044.ttf",
+    "index.html": "/index.html",
+    "main.914625f0.css.map": "/static/css/main.914625f0.css.map",
+    "main.95436780.js.map": "/static/js/main.95436780.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.914625f0.css",
+    "static/js/main.95436780.js"
+  ]
+}
