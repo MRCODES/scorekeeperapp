@@ -8,17 +8,17 @@ import mark from './underscore.png';
 function App() {
 
 
-/* #1 */
+/* Player #1 */
 
 /* Setting useState */
 const [dotClick, setDotClick] = useState(0);
 
-/* plus counting function to run inside button  */
+/* the "plus" counting function to run inside the button  */
 function plusClick() {
   setDotClick(dotClick + 1);
 }
 
-/* minus function to run inside button  */
+/* the "minus" function to run inside the button  */
 function minusClick() {
   setDotClick(dotClick - 1);
 }
@@ -28,12 +28,12 @@ function minusClick() {
 
 
 
-/* #2 */
+/* Player #2 */
 
 /* Setting useState */
 const [dotClick2, setDotClick2] = useState(0);
 
-/* counting function to run inside button  */
+/* the counting function to run inside button  */
 function plusClick2() {
   setDotClick2(dotClick2 + 1);
 }
@@ -45,6 +45,8 @@ function minusClick2() {
 }
 
 
+  /* RESET */
+  
 
 /* reset function to run inside button  */
 function buttonReset() {
@@ -78,48 +80,79 @@ return (
 <body>
 
 
-<div id="inner-container">
+<div id="container">
 
-<h1 id="score-keeper-logo"></h1>
+{/* LOGO */}
+<p id="score-keeper-logo" alt="A circular chalk-drawn logo with plus and minus signs."></p>
 
+      
+      
+      <div id="feature">
+        
+              
+        {/* PLAYERS  */}
+                         
+          <div className='block'>
+          <p id="player-1">PLAYER 1</p>
+            <p id="mark-1"><img src={mark} alt="underline mark under player #1 title" /></p>
+            <p id="counter-display1">{dotClick}</p>
 
-<div id="players">
-<p id="player-1">PLAYER 1</p>
-<p id="player-2">PLAYER 2</p>
-</div>
+            <div id='player-1-buttons'>
+              
+              <button onClick={plusClick} id="plus1"><p></p></button>
 
+              <button onClick={minusClick} id="minus1"><p></p></button>
 
-<div id="marks">
-<p id="mark-1"><img src={mark}/></p>
-<p id="mark-2"><img src={mark}/></p>
-</div>
+            </div>
 
+          </div>
+          
 
-
-<div id="counter-display">
-<p id="counter-display1">{dotClick}</p>
-<p id="counter-display2">{dotClick2}</p>
-</div>
-
-
-<div id="player-buttons">
-<div id='player-1-buttons'>
-<button onClick={plusClick} id="plus"><p></p></button>
-<button onClick={minusClick} id="minus"><p></p></button>
-</div>
-
-<div id='player-2-buttons'>
-<button onClick={plusClick2} id="plus"><p></p></button>
-<button onClick={minusClick2} id="minus"><p></p></button>
-</div>
-</div>
+          <div className='block'>
+            
+            <p id="player-2">PLAYER 2</p>
+            <p id="mark-2"><img src={mark} alt="underline mark under player #2 title" /></p>
+            <p id="counter-display2">{dotClick2}</p>
 
 
-<button id="reset" onClick={buttonReset}></button>
+            <div id='player-2-buttons'>
+  
+              <button onClick={plusClick2} id="plus2"><p></p></button>
+              <button onClick={minusClick2} id="minus2"><p></p></button>
+              
+            </div>
+            
+          
+          </div>
+                
+        
+        
+        
+      </div>
+      
 
+      
+      {/* PLUS and MINUS BUTTONS  */}
+      
+      <div id="player-buttons">
+      </div>
+      
 
-<div id="copyright">Copyright® Michael Robinson</div>
-</div> {/* inner container  */}
+      
+      {/* RESET BUTTON */}
+      
+      <button id="reset" onClick={buttonReset}></button>
+      
+
+      
+      {/* COPYRIGHT */}
+      
+      <div id="copyright">Copyright® Michael Robinson</div>
+      
+
+    
+    
+    </div> {/* inner container  */}
 
 </body>  
   );

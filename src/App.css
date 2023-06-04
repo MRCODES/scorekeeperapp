@@ -6,6 +6,7 @@
 
   padding: 0;
   margin: 0;
+  /*border: red solid 1px;*/
 }
 
 
@@ -25,7 +26,6 @@
 
 
 
-
 body {
 
   display: grid;
@@ -33,39 +33,9 @@ body {
   grid-template-rows: auto;
   background-image: url(/tiktoktoe-pexels-pixabay-220051.jpg);
   background-position: center center;
-
   background-size: cover;
   font-family: 'chalk';
   background-color: #fff;
-  padding-top: clamp(0px, 5%, 5px);
-  padding-bottom: clamp(0px, 5%, 5px);
-  margin-top: 1%;
-
-
-}
-
-
-
-/*---*||||||||INNER CONTAINER||||||||*--*/
-#inner-container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  height: 90vh;
-  width: clamp(320px, 400px, 600px);
-  /* Using CSS clamp */
-
-  /* Adding a max-width as a fallback */
-  background-color: #333;
-  color: white;
-  border-radius: 20px 20px;
-  margin: 0 auto;
-  box-shadow: 1px 1px 4px 1px black;
-
-}
-
-#inner-container p {
-  font-family: 'chalk2';
 }
 
 
@@ -74,11 +44,8 @@ body {
 #score-keeper-logo {
   display: flex;
   font-family: 'chalk';
-
   background-color: rgb(82, 69, 53);
   border-radius: 20px 20px 0px 0px;
-
-
 
   align-items: center;
   justify-content: center;
@@ -86,59 +53,109 @@ body {
 
   width: 100%;
   height: clamp(50px, 100px, 150px);
-  padding: 3% 0;
   margin: 0 auto;
 
   background-image: url(/score-keeper-white-01.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  border-bottom: 1px solid #000;
+
 }
 
+
+/*---*||||||||INNER CONTAINER||||||||*--*/
+#container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: auto;
+  height: 85%;
+
+
+  background-color: #333;
+  color: white;
+  border-radius: 20px 20px;
+  margin: 5% auto;
+  box-shadow: 1px 1px 4px 1px black;
+  /*border: red solid 1px;*/
+}
+
+#container p {
+  font-family: 'chalk2';
+}
+
+
+
+.block {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  margin: 0 auto;
+  padding: 1%;
+  width: 90%;
+
+
+}
 
 /*---*||||||||PLAYER 1 and 2 TEXT||||||||*--*/
 
-#players {
+#feature {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  place-items: center;
-  font-size: clamp(.5rem, 2vw, 4rem);
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
 
+  font-size: 100%;
+  text-align: center;
+  /*background-color: #fff;*/
+  height: 50%;
+  margin-top: 10%;
 
 }
 
-#player-1 {
+#player-1,
+#player-2 {
+
   display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+
+
 }
 
-#player-1 p,
-#player-2 p {
-  width: 100%;
-}
+
 
 /*---*||||||||CHALK MARKS||||||||*--*/
 
-#marks {
+/*---*||||||||CHALK MARKS 1||||||||*--*/
 
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  margin-top: clamp(-100%, 0%, -20%);
+#mark-1 {
+  width: clamp(50px, 120px, 300px);
+  margin: 0 auto;
+}
+
+#mark-1 img {
+  display: flex;
+  width: clamp(50%, 90%, 100%);
+  margin: 0 auto;
 
 }
 
+/*---*||||||||CHALK MARKS 2||||||||*--*/
 
-#mark-1 img {
-  width: clamp(50px, 50%, 500px);
-  margin-left: clamp(40px, 5%, 35px);
+#mark-2 {
+  display: flex;
+  width: clamp(50px, 120px, 300px);
+  margin: 0 auto;
 }
 
 #mark-2 img {
-  width: clamp(50px, 50%, 500px);
-  margin-left: clamp(40px, 5%, 35px);
+  width: clamp(50%, 90%, 100%);
+  margin: 0 auto;
+
 }
 
 
@@ -147,8 +164,11 @@ body {
 #counter-display {
 
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
 
 }
 
@@ -158,31 +178,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-
   font-size: 4rem;
-
-
   height: clamp(100px, 0%, 150px);
   margin: 0 auto;
-  width: clamp(5px, 100px, 500px);
-
+  width: clamp(5px, 70px, 300px);
   background-color: #333;
   color: rgb(255, 255, 255);
-
   border: 25px solid rgba(255, 255, 255, .8);
   border-image: url("https://www.unicefusa.org/sites/default/files/answer-box.png") 40;
+
+  margin: 20px auto;
+
 }
 
 
 /*---*||||||||BUTTONS||||||||*--*/
 
+/*---*|||All Buttons|||*--*/
+
 button {
-  display: flex;
+  display: grid;
   height: 50px;
   width: 50px;
   justify-content: center;
   align-items: center;
+
   margin: 0 auto;
   margin-top: 1%;
 
@@ -198,55 +218,88 @@ button {
 #player-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 
 
 }
 
 
-#player-buttons>#player-1-buttons {
-  display: inherit;
+#player-1-buttons {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  width: 70%;
+  gap: 5%;
   margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
 
 
 }
 
-#player-buttons>#player-2-buttons {
-  display: inherit;
+
+#player-2-buttons {
+
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  width: 70%;
   margin: 0 auto;
+  gap: 5%;
+
+  margin-bottom: 20px;
+
 }
 
 
 /*---*||||||||PLUS and MINUS and RESET||||||||*--*/
 
-#plus {
+#plus1 {
   background-image: url(/plus-01.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-right: 10%;
+
 }
 
-#minus {
+#minus1 {
   background-image: url(/minus.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+
+#plus2 {
+  background-image: url(/plus-01.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#minus2 {
+  background-image: url(/minus.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 
 #reset {
+
   background-image: url(/chalk-refresh-01.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: 10%;
   width: 50px;
   height: 50px;
+  margin-top: -260px;
+
+
 }
 
 
@@ -255,6 +308,11 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: clamp(-150px, -150px, -200px);
+  height: 30px;
+  background-color: rgb(34, 33, 33);
+
+
 
 
 
